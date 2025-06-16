@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+input, button, select, textarea {
+    font: inherit;
+    border: none;
+    background: none;
+    appearance: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+    color: white;
+    background-color: none;
+}
+#layout1 .main {
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: none;
+}
+#layout1 .title {
+    position: relative;
+    top: calc(50% - 105px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    height: fit-content;
+    font-size: 20px;
+    color: white;
+    background-color: none;
+}
+#layout1 .input-box {
+    position: relative;
+    top: calc(50% - 100px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(60, 60, 60);
+}
+#layout1 .text-box {
+    position: relative;
+    top: -12px;
+    left: 13px;
+    width: 250px;
+    height: 20px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(60, 60, 60);
+}
+#layout .text-box::placeholder {
+    font-size: 16px;
+}
+#layout1 .text-box:focus {
+    outline: none;
+}
+#layout1 .send-button {
+    position: relative;
+    top: 5px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    color: white;
+    background-color: rgb(100, 100, 100);
+}
+#layout1 .send-button-text {
+    position: relative;
+    top: -10px;
+    left: 3px;
+    font-size: 35px;
+}
+#layout1 .notice-message {
+    position: relative;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    height: fit-content;
+    font-size: 10px;
+    color: rgb(60, 60, 60);
+    background-color: none;
+}
+#layout2 .message-container {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 50px);
+    height: 100%;
+    padding-bottom: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: none;
+}
+#layout2 .message-container::-webkit-scrollbar {
+    display: none;
+}
+#layout2 .send-message {
+    display: inline-block;
+    width: auto;
+    align-self: flex-end;
+    max-width: 90%;
+    min-width: 20px;
+    height: auto;
+    min-height: 24px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(60, 60, 60);
+}
+#layout2 .response-message {
+    align-self: flex-start;
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    font-size: 16px;
+    color: white;
+    background-color: none;
+}
+#layout2 .main {
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: none;
+}
+#layout2 .input-box {
+    position: relative;
+    top: calc(100% - 80px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 50px);
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(60, 60, 60);
+}
+#layout2 .text-box {
+    position: relative;
+    top: -12.5px;
+    left: 15px;
+    width: calc(100% - 60px);
+    height: 20px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(60, 60, 60);
+}
+#layout2 .text-box::placeholder{
+    font-size: 16px;
+}
+#layout2 .text-box:focus {
+    outline: none;
+}
+#layout2 .send-button {
+    position: relative;
+    top: 5px;
+    right: -20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    color: white;
+    background-color: rgb(100, 100, 100);
+}
+#layout2 .send-button-text {
+    position: relative;
+    top: -10px;
+    left: 3px;
+    font-size: 35px;
+}
+#layout2 .notice-message {
+    position: relative;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    height: fit-content;
+    font-size: 10px;
+    color: rgb(60, 60, 60);
+    background-color: none;
+}
