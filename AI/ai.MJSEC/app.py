@@ -57,7 +57,7 @@ def create_session():
     session_key_DB[session_id["session_id"]] = session_id
     with open(f"{db_path}DB/session_key_DB.json", "w", encoding="utf-8") as f:
         json.dump(session_key_DB, f, ensure_ascii=False, indent=4)
-    with open(f"{db_path}DB/non-member_chathistory/{session_id["session_id"]}.json", "w", encoding="utf-8") as f:
+    with open(f"{db_path}DB/non-member_chathistory/{session_id['session_id']}.json", "w", encoding="utf-8") as f:
         json.dump([{"role": "system", "content": system_prompt}], f, ensure_ascii=False, indent=4)
     return jsonify(session_id)
 
