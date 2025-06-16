@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mjsec-flask-app:latest
+    env_file:
+      - .env
+    ports:
+      - "7000:7000"
+    volumes:
+      - ./DB:/app/DB
+    restart: unless-stopped

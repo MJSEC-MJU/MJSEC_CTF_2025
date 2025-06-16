@@ -1,0 +1,28 @@
+# 베이스 이미지로 파이썬 슬림 사용
+FROM python:3.10-slim
+
+# 작업 디렉토리 설정
+WORKDIR /app
+
+# 시스템 패키지 업데이트 및 필요 시 의존성 설치
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+ && rm -rf /var/lib/apt/lists/*
+
+# 파이썬 의존성 복사 및 설치
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 애플리케이션 코드 복사
+COPY . .
+
+# 환경변수 설정
+ENV PYTHONUNBUFFERED=1 \
+    FLASK_APP=app.py \
+    FLASK_ENV=production
+
+# 컨테이너 외부로 포트 5000 오픈
+EXPOSE 7000
+
+# Gunicorn으로 앱 실행: 4 워커, 0.0.0.0 바인딩
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:7000", "app:app"]

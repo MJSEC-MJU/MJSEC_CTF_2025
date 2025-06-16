@@ -76,4 +76,6 @@ def handle_message():
     return reply
 
 if __name__ == "__main__":
-    app.run(debug=os.getenv("DEBUG"), port=os.getenv("SERVER_PORT"))
+    ort = int(os.getenv("PORT", 5000))
+    debug = os.getenv("DEBUG", "False").lower() in ("1", "true", "yes")
+    app.run(host="0.0.0.0", port=port, debug=debug)

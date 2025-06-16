@@ -1,1 +1,4 @@
-flask_cors
+flask_corsFlask>=2.2
+Flask-Cors>=3.0
+python-dotenv>=0.21
+openai>=0.27
