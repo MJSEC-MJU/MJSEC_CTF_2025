@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ai.HJSEC</title>
+    <link rel="stylesheet" href="{{BASE_URL}}/static/index/style-desktop.css">
+    <link rel="stylesheet" href="{{BASE_URL}}/static/index/style-mobile.css" media="screen and (max-width: 750px)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 id="logo" class="logo">ai.MJSEC</h1>
+    </header>
+
+    <div id="layout1">
+        <main>
+            <div class="main">
+                <p class="title">무엇을 도와드릴까요?</p>
+                <div class="input-box">
+                    <input id="user-input-layout1" class="text-box" type="text"/>
+                    <button id="request-button-layout1" class="send-button">
+                        <p id="send-button-text-layout1" class="send-button-text">></p>
+                    </button>
+                    <p class="notice-message">AI는 실수를 할 수 있습니다. 중요한 정보는 한번 더 확인하세요.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="layout2" style="display: none;">
+        <main>
+            <div class="main">
+                <div class="message-container"></div>
+                <div class="input-box">
+                    <input id="user-input-layout2" class="text-box" type="text" placeholder="무엇이든 물어보세요!" />
+                    <button id="request-button-layout2" class="send-button">
+                        <p id="send-button-text-layout2" class="send-button-text">></p>
+                    </button>
+                    <p class="notice-message">AI는 실수를 할 수 있습니다. 중요한 정보는 한번 더 확인하세요.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const BASE_URL = "{{BASE_URL}}";
+    </script>
+    <script src="{{BASE_URL}}/static/index/script.js"></script>
+</body>
+</html>
